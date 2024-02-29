@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Operations</title>
+    <style>
+        body {
+            background-color: aqua;
+            text-align: center;
+        }
+
+        .container {
+            background-color: white;
+            border: 2px solid black;
+            width: 80%;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        label {
+            color: brown;
+            font-size: 25px;
+            margin-top: 20px;
+            display: block;
+        }
+
+        input {
+            border-radius: 5px;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            color: #fff;
+            border-radius: 6px;
+            margin-top: 20px;
+            padding: 8px 22px;
+            background: #7d2ae8;
+            transition: all 0.2s ease;
+            transform: scale(0.96);
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color:red;">Arithmetic Operations</h1>
+    <div class="container">
+        <label for="m1">Number 1:</label>
+        <input type="number" id="m1" placeholder="Enter the First Number">
+        
+        <label for="m2">Number 2:</label>
+        <input type="number" id="m2" placeholder="Enter the Second Number">
+        
+        <button onclick="add()">ADD</button>
+        <button onclick="sub()">SUB</button>
+        <button onclick="div()">DIV</button>
+        <button onclick="mult()">MULT</button>
+    </div>
+
+    <div id="result"></div>
+
+    <script>
+        function add() {
+            var m = Number(document.getElementById("m1").value);
+            var n = Number(document.getElementById("m2").value);
+            var o = m + n;
+            document.getElementById("result").innerHTML = "The addition of " + m + " & " + n + " is: " + o;
+        }
+
+        function sub() {
+            var m = Number(document.getElementById("m1").value);
+            var n = Number(document.getElementById("m2").value);
+            var o = m - n;
+            document.getElementById("result").innerHTML = "The subtraction of " + m + " & " + n + " is: " + o;
+        }
+
+        function div() {
+            var m = Number(document.getElementById("m1").value);
+            var n = Number(document.getElementById("m2").value);
+            var o = m / n;
+            document.getElementById("result").innerHTML = "The division of " + m + " & " + n + " is: " + o;
+        }
+
+        function mult() {
+            var m = Number(document.getElementById("m1").value);
+            var n = Number(document.getElementById("m2").value);
+            var o = m * n;
+            document.getElementById("result").innerHTML = "The multiplication of " + m + " & " + n + " is: " + o;
+        }
+    </script>
+</body>
+</html>
